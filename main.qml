@@ -61,7 +61,16 @@ Window {
             }
 
             var lpLeft = this.text*1 + damage;
-            this.text = lpLeft<0 ? 0 : lpLeft;
+
+            if(lpLeft<=0){
+                this.text = 0;
+            }
+            else if(lpLeft>=99999){
+                this.text = 99999;
+            }
+            else {
+                this.text = lpLeft;
+            }
             break;
         }
         _resetDamage();
@@ -92,9 +101,17 @@ Window {
         _concatToDamage(this.text);
     }
 
-    function onClick00() {
-        if(_concatToDamage(this.text) !== 0){
+    function onClick0(){
+        if(damage_number.text !== ""){
             _concatToDamage("0");
+        }
+    }
+
+    function onClick00() {
+        if(damage_number.text !== ""){
+            if(_concatToDamage(this.text) !== 0){
+                _concatToDamage("0");
+            }
         }
     }
 
@@ -360,7 +377,7 @@ Window {
                 id: button_0
                 text: qsTr("0")
                 font.pointSize: 30
-                onClicked: { onClickNumber(); }
+                onClicked: { onClick0(); }
 
                 Layout.row: 3
                 Layout.column: 1
