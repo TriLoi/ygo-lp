@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.3
 
 Window {
     visible: true
-    width: 320
+    width: 315
     height: 560
     title: qsTr("Yugioh Life Point")
     color: "#eeeeee"
