@@ -71,7 +71,7 @@ View {
             id: layout_extra
             columnSpacing: 0
             rowSpacing: 0
-            scale: 0.4
+            scale: 0.5
             rows: 1
             columns: 3
 
@@ -88,7 +88,6 @@ View {
 
                 Layout.row: 0
                 Layout.column: 0
-                Layout.fillWidth: true
                 Layout.fillHeight: true
             }
 
@@ -112,7 +111,6 @@ View {
 
                 Layout.row: 0
                 Layout.column: 2
-                Layout.fillWidth: true
                 Layout.fillHeight: true
             }
         }
@@ -147,7 +145,7 @@ View {
                 Text {
                     id: damage_number
                     text: p_damage_number_text
-                    lineHeight: 0.9
+                    anchors.rightMargin: 20
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignRight
                     font.pointSize: 30
